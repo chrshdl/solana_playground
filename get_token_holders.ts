@@ -1,7 +1,7 @@
 import {clusterApiUrl, Connection, GetProgramAccountsFilter } from "@solana/web3.js";
 import { TOKEN_PROGRAM_ID } from "@solana/spl-token";
 
-const mintAddress = "G3DAcz47M31sV3miTZWgJM8wX2QhyyGoAKQt3BwDTuk"
+const tokenAddress = "G3DAcz47M31sV3miTZWgJM8wX2QhyyGoAKQt3BwDTuk"
 
 async function main() {
   const solana = new Connection(clusterApiUrl("devnet"))
@@ -14,7 +14,7 @@ async function main() {
       memcmp:
       {
         offset: 0,
-        bytes: mintAddress
+        bytes: tokenAddress
       }
     }
   ]
